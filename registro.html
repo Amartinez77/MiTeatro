@@ -11,7 +11,7 @@
     <meta name="description" content="">
 
 
-    <title>Registro</title>
+    <title>Cartelera</title>
     <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/dropdown/css/style.css">
@@ -23,14 +23,16 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap">
     </noscript>
-    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=bM5pJA">
-    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=bM5pJA" type="text/css">
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=7iPpeY">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=7iPpeY" type="text/css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XRW0X608W"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-3XRW0X608W');
@@ -39,17 +41,19 @@
 
 <body>
 
-    <section data-bs-version="5.1" class="menu menu3 cid-v0v9CVmhK3" once="menu" id="menu03-m">
+    <section data-bs-version="5.1" class="menu menu3 cid-v0v9CVmhK3" once="menu" id="menu03-1">
 
 
         <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
             <div class="container">
-                <div class="navbar-brand">
+                <div class="navbar-brand d-flex align-items-center">
                     <span class="navbar-logo">
                         <a href="https://mobiri.se">
-                            <img src="assets/images/logo2-2.png" alt="logo" style="height: 4rem;">
+
                         </a>
                     </span>
+                    <a class="btn btn-danger ms-3" href="comprar.html"
+                        style="height:3rem;display:inline-flex;align-items:center;">Comprar entradas</a>
 
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
@@ -96,277 +100,79 @@
         </nav>
     </section>
 
-    <section data-bs-version="5.1" class="form03 cid-v0vfetVW9j" id="form03-o">
-
-
-
-
+    <!-- Registro: formulario simple para usuarios del teatro -->
+    <section data-bs-version="5.1" class="form03 cid-v0vfetVW9j mt-3" id="form03-o">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-lg item-wrapper">
-                    <div class="mbr-section-head mb-5">
+                <div class="col-12 col-lg-6">
+                    <div class="mbr-section-head mb-3">
                         <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>Contact us</strong>
+                            <strong>Registro</strong>
                         </h3>
-
+                        <p class="mbr-section-subtitle mbr-fonts-style align-center mt-2 display-7">Crea tu cuenta para
+                            comprar entradas, recibir novedades y acceder a promociones exclusivas del teatro.</p>
                     </div>
-                    <div class="col-lg-12 mx-auto mbr-form" data-form-type="formoid">
-                        <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler"
-                            data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true"
-                                value="cnOaE5p7NBz1iaQ9B0NqWy0PnsybNEeFscF2ulP3xxzo2b5xYaCpcprYd71ypzkJ9MX3BEcIQUbqxJkHgsH5lkJyiueYK54/WeYQOMm9Ofhyabz3cz7lZ5XYf31pB2+l">
+
+                    <div class="card p-3">
+                        <form id="registerForm" class="mbr-form form-with-styler" action="#" method="POST"
+                            onsubmit="return validateRegister();">
                             <div class="row">
-                                <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
-                                    filling out the form!</div>
-                                <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                    Oops...! some problem!
+                                <div class="col-12 mb-3">
+                                    <label class="form-label" for="name">Nombre completo</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Ej. Ana Pérez" required>
                                 </div>
-                            </div>
-                            <div class="dragArea row">
-                                <div class="col-md col-sm-12 form-group mb-3 mb-3" data-for="name">
-                                    <input type="text" name="name" placeholder="Name" data-form-field="name"
-                                        class="form-control" value="" id="name-form03-o">
+
+                                <div class="col-12 mb-3">
+                                    <label class="form-label" for="email">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="tu@ejemplo.com" required>
                                 </div>
-                                <div class="col-md col-sm-12 form-group mb-3 mb-3" data-for="email">
-                                    <input type="email" name="email" placeholder="E-mail" data-form-field="email"
-                                        class="form-control" value="" id="email-form03-o">
+
+                                <div class="col-12 mb-3">
+                                    <label class="form-label" for="password">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="Mínimo 6 caracteres" minlength="6" required>
                                 </div>
-                                <div class="col-12 form-group mb-3 mb-3" data-for="phone">
-                                    <input type="tel" name="phone" placeholder="Phone" data-form-field="phone"
-                                        class="form-control" value="" id="phone-form03-o">
+
+                                <div class="col-12 mb-3">
+                                    <label class="form-label" for="confirmPassword">Confirmar contraseña</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        name="confirmPassword" placeholder="Repite la contraseña" required>
                                 </div>
-                                <div class="col-12 form-group mb-3 mb-3" data-for="textarea">
-                                    <textarea name="textarea" placeholder="Message" data-form-field="textarea"
-                                        class="form-control" id="textarea-form03-o"></textarea>
+
+                                <div class="col-12 mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="notifications"
+                                        name="notifications">
+                                    <label class="form-check-label" for="notifications">Deseo recibir notificaciones
+                                        sobre
+                                        nuevos eventos</label>
                                 </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                                    <button type="submit" class="btn btn-primary display-7">
-                                        Send message
-                                    </button>
+
+                                <div id="regError" class="col-12 mb-2 text-danger" style="display:none;"></div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
                                 </div>
                             </div>
                         </form>
                     </div>
 
-
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="image-wrapper">
-                        <img class="w-100" src="assets/images/gallery04.jpg" alt="Mobirise Website Builder">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="list07 cid-v0vflDoPid" id="list07-p">
-
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="col-12 col-md-12">
-                        <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
-                            <strong>Join our community.</strong>
-                        </h5>
-                        <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
-                            With a spirit of innovation, we navigate uncharted territories, exploring new ideas,
-                            technologies, and approaches.</h6>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-8">
-                    <div id="bootstrap-accordion_23" class="panel-group accordionStyles accordion" role="tablist"
-                        aria-multiselectable="true">
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                    data-bs-toggle="collapse" data-core="" href="#collapse1_23" aria-expanded="false"
-                                    aria-controls="collapse1">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                                        How much does delivery cost?
-                                    </h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse1_23" class="panel-collapse noScroll collapse" role="tabpanel"
-                                aria-labelledby="headingOne" data-parent="#accordion"
-                                data-bs-parent="#bootstrap-accordion_23">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum
-                                        laoreet tincidunt. Proin et sapien scelerisque, ornare lectus eget, iaculis
-                                        lectus. Pellentesque viverra molestie tortor. Nunc sed interdum est, in maximus
-                                        diam. Donec eu tellus dictum, gravida velit et, sagittis arcu. Proin et lectus
-                                        dapibus. Cras fringilla elit velit placerat tortor mollis cursus.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                    data-bs-toggle="collapse" data-core="" href="#collapse2_23" aria-expanded="false"
-                                    aria-controls="collapse2">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                                        What is the estimated delivery time?
-                                    </h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse2_23" class="panel-collapse noScroll collapse" role="tabpanel"
-                                aria-labelledby="headingOne" data-parent="#accordion"
-                                data-bs-parent="#bootstrap-accordion_23">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum
-                                        laoreet tincidunt. Proin et sapien scelerisque, ornare lectus eget, iaculis
-                                        lectus. Pellentesque viverra molestie tortor. Nunc sed interdum est, in maximus
-                                        diam. Donec eu tellus dictum, gravida velit et, sagittis arcu. Proin et lectus
-                                        dapibus. Cras fringilla elit velit placerat tortor mollis cursus.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                    data-bs-toggle="collapse" data-core="" href="#collapse3_23" aria-expanded="false"
-                                    aria-controls="collapse3">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                                        Do you offer same-day delivery?
-                                    </h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse3_23" class="panel-collapse noScroll collapse" role="tabpanel"
-                                aria-labelledby="headingOne" data-parent="#accordion"
-                                data-bs-parent="#bootstrap-accordion_23">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum
-                                        laoreet tincidunt. Proin et sapien scelerisque, ornare lectus eget, iaculis
-                                        lectus. Pellentesque viverra molestie tortor. Nunc sed interdum est, in maximus
-                                        diam. Donec eu tellus dictum, gravida velit et, sagittis arcu. Proin et lectus
-                                        dapibus. Cras fringilla elit velit placerat tortor mollis cursus.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                    data-bs-toggle="collapse" data-core="" href="#collapse4_23" aria-expanded="false"
-                                    aria-controls="collapse4">
-                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                                        Can I track my delivery order?
-                                    </h6>
-                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                </a>
-                            </div>
-                            <div id="collapse4_23" class="panel-collapse noScroll collapse" role="tabpanel"
-                                aria-labelledby="headingOne" data-parent="#accordion"
-                                data-bs-parent="#bootstrap-accordion_23">
-                                <div class="panel-body">
-                                    <p class="mbr-fonts-style panel-text display-7">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum
-                                        laoreet tincidunt. Proin et sapien scelerisque, ornare lectus eget, iaculis
-                                        lectus. Pellentesque viverra molestie tortor. Nunc sed interdum est, in maximus
-                                        diam. Donec eu tellus dictum, gravida velit et, sagittis arcu. Proin et lectus
-                                        dapibus. Cras fringilla elit velit placerat tortor mollis cursus.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
+                        <img class="w-100 rounded" src="assets/images/gallery04.jpg" alt="Teatro"
+                            style="object-fit:cover; height:320px;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="numbers01 cid-v0vfqaoa2A" id="numbers01-q">
 
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head mb-5">
-                        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>Features with numbers</strong>
-                        </h4>
 
-
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="item features-without-image col-12 col-md-6 col-lg-4 active">
-                    <div class="item-wrapper">
-                        <div class="item-content">
-                            <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 mbr-number display-1">
-                                <strong>01.</strong>
-                            </h5>
-                            <h4 class="card-title mbr-fonts-style display-5">
-                                <strong>Form</strong>
-                            </h4>
-                            <p class="card-text mbr-fonts-style mt-0 mb-3 display-7">
-                                We begin by shaping the form of concepts, setting the stage for meaningful content.
-                            </p>
-                            <div class="mbr-section-btn item-footer">
-                                <a href="" class="btn item-btn btn-primary display-7">Learn More</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-md-6 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="item-content">
-                            <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 mbr-number display-1">
-                                <strong>02.</strong>
-                            </h5>
-                            <h4 class="card-title mbr-fonts-style display-5">
-                                <strong>Content</strong>
-                            </h4>
-                            <p class="card-text mbr-fonts-style mt-0 mb-3 display-7">
-                                With form in place, we infuse it with engaging content, giving depth and purpose.
-                            </p>
-                            <div class="mbr-section-btn item-footer">
-                                <a href="" class="btn item-btn btn-primary display-7">Learn More</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="item features-without-image col-12 col-md-6 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="item-content">
-                            <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 mbr-number display-1">
-                                <strong>03.</strong>
-                            </h5>
-                            <h4 class="card-title mbr-fonts-style display-5">
-                                <strong>Meaning</strong>
-                            </h4>
-                            <p class="card-text mbr-fonts-style mt-0 mb-3 display-7">
-                                The journey concludes as we uncover the profound meaning within our creations, making
-                                them
-                                truly resonate.
-                            </p>
-                            <div class="mbr-section-btn item-footer">
-                                <a href="" class="btn item-btn btn-primary display-7">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-bs-version="5.1" class="footer2 cid-v0vaWounLi" once="footers" id="footer02-n">
+    <section data-bs-version="5.1" class="footer2 cid-v0vaWounLi" once="footers" id="footer02-g">
 
 
 
@@ -410,14 +216,13 @@
             style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>
         <p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1"
-            href="https://mobirise.com/builder/ai-website-generator.html">AI Website Generator</a>
+            href="https://mobirise.com/offline-website-builder.html">Offline Website Software</a>
     </section>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/smoothscroll/smooth-scroll.js"></script>
     <script src="assets/ytplayer/index.js"></script>
     <script src="assets/dropdown/js/navbar-dropdown.js"></script>
     <script src="assets/theme/js/script.js"></script>
-    <script src="assets/formoid/formoid.min.js"></script>
 
 
 </body>
