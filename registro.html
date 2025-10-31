@@ -224,6 +224,56 @@
     <script src="assets/dropdown/js/navbar-dropdown.js"></script>
     <script src="assets/theme/js/script.js"></script>
 
+    <!-- Modal de agradecimiento (mockup) -->
+    <div class="modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thanksModalLabel">Registro completado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Gracias por registrarte. Serás redirigido al inicio.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="thanksGoHome" type="button" class="btn btn-primary">Ir al inicio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mockup: muestra modal y redirige al home
+        function validateRegister() {
+            // validaciones simples (ya se usan atributos required en inputs)
+            var pwd = document.getElementById('password').value;
+            var cpwd = document.getElementById('confirmPassword').value;
+            var errorEl = document.getElementById('regError');
+            if (pwd !== cpwd) {
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Las contraseñas no coinciden.';
+                return false;
+            }
+            errorEl.style.display = 'none';
+
+            var thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'));
+            thanksModal.show();
+
+            // cerrar modal y redirigir al home al pulsar el botón
+            document.getElementById('thanksGoHome').addEventListener('click', function () {
+                window.location.href = 'index.html';
+            });
+
+            // también redirigir cuando el modal se cierra
+            document.getElementById('thanksModal').addEventListener('hidden.bs.modal', function () {
+                window.location.href = 'index.html';
+            });
+
+            return false; // prevenir envío real
+        }
+    </script>
+
 
 </body>
 
